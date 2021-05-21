@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 5000",
     "client": "npm start --prefix client",
-    "dev": "concurrently \" npm run server\" \"npm run client\""
+    "dev": "BROWSER=/opt/firefox/firefox HTTPS=true SSL_CRT_FILE=/etc/mkcert/localhost.pem SSL_KEY_FILE=/etc/mkcert/localhost-key.pem concurrently \" npm run server\" \"npm run client\""
+
   },
   "eslintConfig": {
     "extends": [
